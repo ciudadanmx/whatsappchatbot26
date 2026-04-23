@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-const OLLAMA_URL = "http://llm.ciudadan.org:11434/api/generate"
+const OLLAMA_URL = process.env.OLLAMA_URL || "http://localhost:11434/api/generate"
 
 async function askOllama(message) {
     try {
